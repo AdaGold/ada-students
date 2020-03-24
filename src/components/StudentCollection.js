@@ -1,5 +1,6 @@
 // src/components/StudentCollection.js
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Student from './Student';
 
@@ -12,6 +13,8 @@ const StudentCollection = (props) => {
           fullName={student.fullName}
           email={student.email}
           present={student.present}
+          id={student.id}
+          onUpdateStudent={props.onUpdateStudent}
         />
       </li>
     );
@@ -23,5 +26,19 @@ const StudentCollection = (props) => {
     </ul>
   );
 };
+
+StudentCollection.propTypes = {
+  students: PropTypes.arrayOf(PropTypes.shape(
+    {
+      fullName: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      present: PropTypes.bool,
+      id: PropTypes.number.isRequired,
+    },
+  )),
+  onUpdateStudent: PropTypes.func.isRequired,
+}
+
+
 
 export default StudentCollection;
