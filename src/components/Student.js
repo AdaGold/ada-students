@@ -5,19 +5,20 @@ import PropTypes from 'prop-types';
 const Student = (props) => {
 
   const [present, setPresent] = useState(props.present);
+  const [fullName, setFullName] = useState(props.fullName);
 
-  const changePresent = () => setPresent(!present);
+  const onButtonClick = () => setPresent(!present);
 
   // Component functions always return JSX
   return (
     <div>
-      <h3>{props.fullName}</h3>
+      <h3>{fullName}</h3>
       <ul>
         <li>Class: C13</li>
         <li>Birthday: {props.birthday}</li>
         <li>Email: {props.email}</li>
       </ul>
-      <button onClick={changePresent}>
+      <button onClick={onButtonClick}>
         Mark {present ? 'Absent' : 'Present'}
       </button>
     </div>
