@@ -30,8 +30,9 @@ const Student = (props) => {
 
   // Component functions always return JSX
   return (
-    <div>
-      <h3>{fullName}</h3>
+    <div className="student">
+      <h3 className={props.present ? 'present' : 'absent'}>{props.fullName}</h3>
+      <input value={props.fullName} onChange={onFullNameInputChange} />
       <ul>
         <li>Class: C13</li>
         <li>Birthday: {props.birthday}</li>
