@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Student = (props) => {
   // Component functions always return JSX
@@ -12,6 +13,11 @@ const Student = (props) => {
       </ul>
     </div>
   );
+};
+
+Student.propTypes = {
+  fullName: PropTypes.string.isRequired,
+  email: PropTypes.string,
 };
 
 export default Student;
