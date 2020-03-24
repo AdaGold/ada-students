@@ -3,19 +3,9 @@ import React from 'react';
 
 import Student from './Student';
 
-const StudentCollection = () => {
-  const students = [
-    {
-      fullName: "Ada Lovelace",
-      email: "ada@lovelace.uk",
-    },
-    {
-      fullName: "Katherine Johnson",
-      email: "kat@nasa.gov",
-    },
-  ];
+const StudentCollection = (props) => {
 
-  const studentComponents = students.map((student, i) => {
+  const studentComponents = props.students.map((student, i) => {
     return (
       <li key={i}>
         <Student fullName={student.fullName} email={student.email} />
