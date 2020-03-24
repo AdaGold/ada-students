@@ -7,10 +7,12 @@ const students = [
   {
     fullName: "Ada Lovelace",
     email: "ada@lovelace.uk",
+    present: true,
   },
   {
     fullName: "Katherine Johnson",
     email: "kat@nasa.gov",
+    present: false,
   },
 ];
 
