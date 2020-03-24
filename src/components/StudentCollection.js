@@ -8,7 +8,11 @@ const StudentCollection = (props) => {
   const studentComponents = props.students.map((student, i) => {
     return (
       <li key={i}>
-        <Student fullName={student.fullName} email={student.email} />
+        <Student
+          fullName={student.fullName}
+          email={student.email}
+          present={student.present}
+        />
       </li>
     );
   });
