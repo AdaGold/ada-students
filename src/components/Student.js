@@ -5,10 +5,28 @@ import './Student.css';
 
 const Student = (props) => {
 
-  const [present, setPresent] = useState(props.present);
-  const [fullName, setFullName] = useState(props.fullName);
+  // Event callback functions
+  const onButtonClick = () => {
+    const updatedStudent = {
+      fullName: props.fullName,
+      birthday: props.birthday,
+      email: props.email,
+      present: !props.present,
+      id: props.id,
+    }
+    props.onUpdateStudent(updatedStudent);
+  }
 
-  const onButtonClick = () => setPresent(!present);
+  const onFullNameInputChange = (event) => {
+    const fullName = event.target.value;
+    props.onUpdateStudent({
+      fullName,
+      birthday: props.birthday,
+      email: props.email,
+      present: props.present,
+      id: props.id,
+    });
+  };
 
   // Component functions always return JSX
   return (
