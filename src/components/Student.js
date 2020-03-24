@@ -8,7 +8,7 @@ const Student = (props) => {
       <h3>{props.fullName}</h3>
       <ul>
         <li>Class: C13</li>
-        <li>Birthday: December 10th, 1815</li>
+        <li>Birthday: {props.birthday}</li>
         <li>Email: {props.email}</li>
       </ul>
     </div>
@@ -20,5 +20,9 @@ Student.propTypes = {
   email: PropTypes.string,
   birthday: PropTypes.string,
 };
+
+Student.defaultProps = {
+  birthday: 'no birthdate on file',
+}
 
 export default Student;
