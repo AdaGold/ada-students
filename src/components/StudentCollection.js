@@ -25,9 +25,7 @@ const StudentCollection = () => {
 
   return (
     <ul className="student-collection">
-      <li>
-        <Student fullName="Improved Ada" email="improved-ada@ada.co" />
-      </li>
+      {studentComponents}
     </ul>
   );
 };
