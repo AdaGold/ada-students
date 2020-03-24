@@ -4,6 +4,17 @@ import React from 'react';
 import Student from './Student';
 
 const StudentCollection = () => {
+  const students = [
+    {
+      fullName: "Ada Lovelace",
+      email: "ada@lovelace.uk",
+    },
+    {
+      fullName: "Katherine Johnson",
+      email: "kat@nasa.gov",
+    },
+  ];
+
   return (
     <ul className="student-collection">
       <li>
