@@ -15,6 +15,14 @@ const StudentCollection = () => {
     },
   ];
 
+  const studentComponents = students.map((student, i) => {
+    return (
+      <li key={i}>
+        <Student fullName={student.fullName} email={student.email} />
+      </li>
+    );
+  });
+
   return (
     <ul className="student-collection">
       <li>
