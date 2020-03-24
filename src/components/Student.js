@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Student.css';
+
 const Student = (props) => {
 
   const [present, setPresent] = useState(props.present);
