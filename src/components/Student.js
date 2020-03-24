@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const Student = (props) => {
+
+  const [present, setPresent] = useState(props.present);
+
+  const changePresent = () => setPresent(!present);
+
   // Component functions always return JSX
   return (
     <div>
@@ -12,6 +17,9 @@ const Student = (props) => {
         <li>Birthday: {props.birthday}</li>
         <li>Email: {props.email}</li>
       </ul>
+      <button onClick={changePresent}>
+        Mark {present ? 'Absent' : 'Present'}
+      </button>
     </div>
   );
 };
