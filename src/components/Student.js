@@ -18,7 +18,7 @@ const Student = (props) => {
         <li>Email: {props.email}</li>
       </ul>
       <button onClick={onButtonClick}>
-        Mark {present ? 'Absent' : 'Present'}
+        Mark {props.present ? 'Absent' : 'Present'}
       </button>
     </div>
   );
@@ -28,6 +28,7 @@ Student.propTypes = {
   fullName: PropTypes.string.isRequired,
   email: PropTypes.string,
   birthday: PropTypes.string,
+  onUpdateStudent: PropTypes.func.isRequired,
 };
 
 Student.defaultProps = {
