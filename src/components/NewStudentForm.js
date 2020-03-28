@@ -37,7 +37,7 @@ const NewStudentForm = (props) => {
   };
 
   return (
-    <form className="new-student-form">
+    <form className="new-student-form" onSubmit={onFormSubmit}>
       <div>
         <label htmlFor="fullName">Name:</label>
         <input name="fullName" />
