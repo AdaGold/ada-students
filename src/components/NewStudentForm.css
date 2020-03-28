@@ -1,0 +1,11 @@
+label { 
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+form div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  width: 300px;
+  align-self: center;
+}
