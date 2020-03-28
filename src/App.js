@@ -36,10 +36,29 @@ function App () {
     setStudentList(students);
   }
 
+  const addStudent = (student) => {
+
+    const newStudentList = [...students];
+
+    // Find the max id and add 1
+    const nextId = newStudentList.reduce((accumulator, currentStudent) => {
+      return Math.max(accumulator, currentStudent.id);
+    }, 0) + 1;
+
+    newStudentList.push({
+      id: nextId,
+      fullName: student.fullName,
+      email: student.email,
+      present: false,
+    });
+
+    setStudentList(newStudentList);
+  }
+
   return (
     <div className="App">
       <StudentCollection students={studentList} onUpdateStudent={updateStudent} />
-      <NewStudentForm />
+      <NewStudentForm addStudentCallback={addStudent} />
     </div>
   );
 }
