@@ -6,6 +6,6 @@ label {
 form div {
   display: grid;
   grid-template-columns: 100px 1fr;
-  width: 300px;
-  align-self: center;
+  width: 400px;
+  margin: 5px;
 }
