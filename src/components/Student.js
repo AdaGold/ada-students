@@ -8,6 +8,16 @@ const Student = (props) => {
 
   const changePresent = () => setPresent(!present);
 
+  const markPresent = function () {
+    if (present) {
+      return;
+    }
+    setPresent(true);
+  }
+
+  console.log(`props are ${ props }`);
+  console.log(`present is ${ present }`);
+
   // Component functions always return JSX
   return (
     <div>
@@ -20,6 +30,7 @@ const Student = (props) => {
       <button onClick={changePresent}>
         Mark {present ? 'Absent' : 'Present'}
       </button>
+      {markPresent()}
     </div>
   );
 };
