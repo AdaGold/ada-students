@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Student from './components/Student';
 import StudentCollection from './components/StudentCollection';
+import NewStudentForm from './components/NewStudentForm';
 import './App.css';
 
 const students = [
@@ -39,6 +40,7 @@ function App () {
   return (
     <div className="App">
       <StudentCollection students={studentList} onUpdateStudent={updateStudent} />
+      <NewStudentForm />
     </div>
   );
 }
