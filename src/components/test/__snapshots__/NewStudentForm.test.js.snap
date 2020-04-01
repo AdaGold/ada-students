@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewStudentForm that it matches the existing snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="new-student-form"
+  >
+    <div>
+      <label
+        for="fullName"
+      >
+        Name:
+      </label>
+      <input
+        name="fullName"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        for="email"
+      >
+        Email:
+      </label>
+      <input
+        class="valid"
+        name="email"
+        value=""
+      />
+    </div>
+    <input
+      type="submit"
+      value="Add Student"
+    />
+  </form>
+</DocumentFragment>
+`;
