@@ -19,7 +19,6 @@ const students = [
 ];
 
 function App () {
-  console.log('rendering');
   const [studentList, setStudentList] = useState(students);
 
   const updateStudent = (updatedStudent) => {
