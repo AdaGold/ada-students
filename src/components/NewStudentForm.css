@@ -9,3 +9,11 @@ form div {
   width: 400px;
   margin: 5px;
 }
+
+input.valid {
+  background: lightgreen;
+}
+
+input.invalid {
+  background: pink;
+}

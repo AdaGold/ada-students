@@ -9,20 +9,13 @@ const NewStudentForm = (props) => {
   });
 
   // event handlers
-  const onNameChange = (event) => {
-    console.log(`Name Field updated ${ event.target.value }`);
-    setFormFields({
-      fullName: event.target.value,
-      email: formFields.email,
-    });
-  };
-
-  const onEmailChange = (event) => {
-    console.log(`Email Field updated ${ event.target.value }`);
-    setFormFields({
-      fullName: formFields.fullName,
-      email: event.target.value,
-    });
+  const onInputChange = (event) => {
+    console.log(`Changing field ${ event.target.name } to ${ event.target.value }`);
+    const newFormFields = {
+      ...formFields,
+    }
+    newFormFields[event.target.name] = event.target.value;
+    setFormFields(newFormFields);
   }
 
   const onFormSubmit = (event) => {
@@ -36,22 +29,27 @@ const NewStudentForm = (props) => {
     });
   };
 
+  // validate email
+  const emailValid = () => {
+    return formFields.email.match(/\S+@\S+/) || formFields.email === '';
+  }
+
   return (
     <form className="new-student-form" onSubmit={onFormSubmit}>
       <div>
         <label htmlFor="fullName">Name:</label>
         <input name="fullName"
-          onChange={onNameChange}
+          onChange={onInputChange}
           value={formFields.fullName}
-          name="fullName"
         />
       </div>
       <div>
         <label htmlFor="email">Email:</label>
         <input
           name="email"
-          onChange={onEmailChange}
+          onChange={onInputChange}
           value={formFields.email}
+          className={emailValid() ? "valid" : "invalid"}
         />
       </div>
       <input
