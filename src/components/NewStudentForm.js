@@ -10,7 +10,6 @@ const NewStudentForm = (props) => {
 
   // event handlers
   const onInputChange = (event) => {
-    console.log(`Changing field ${ event.target.name } to ${ event.target.value }`);
     const newFormFields = {
       ...formFields,
     }
@@ -35,17 +34,25 @@ const NewStudentForm = (props) => {
   }
 
   return (
-    <form className="new-student-form" onSubmit={onFormSubmit}>
+    <form
+      className="new-student-form"
+      onSubmit={onFormSubmit}
+      data-testid="NewStudentForm--form"
+    >
       <div>
         <label htmlFor="fullName">Name:</label>
-        <input name="fullName"
+        <input
+          id="fullName"
+          name="fullName"
           onChange={onInputChange}
           value={formFields.fullName}
+          className="fullname"
         />
       </div>
       <div>
         <label htmlFor="email">Email:</label>
         <input
+          id="email"
           name="email"
           onChange={onInputChange}
           value={formFields.email}
