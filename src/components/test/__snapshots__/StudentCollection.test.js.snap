@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentCollection will render properly 1`] = `
+<DocumentFragment>
+  <ul
+    class="student-collection"
+  >
+    <li>
+      <div
+        class="student"
+      >
+        <h3
+          class="present"
+        >
+          Serena Williams
+        </h3>
+        <input
+          value="Serena Williams"
+        />
+        <ul>
+          <li>
+            Class: C13
+          </li>
+          <li>
+            Birthday: no birthdate on file
+          </li>
+          <li>
+            Email: serena@williams.com
+          </li>
+        </ul>
+        <button>
+          Mark Absent
+        </button>
+      </div>
+    </li>
+    <li>
+      <div
+        class="student"
+      >
+        <h3
+          class="absent"
+        >
+          Vemus Williams
+        </h3>
+        <input
+          value="Vemus Williams"
+        />
+        <ul>
+          <li>
+            Class: C13
+          </li>
+          <li>
+            Birthday: no birthdate on file
+          </li>
+          <li>
+            Email: venus@williams.com
+          </li>
+        </ul>
+        <button>
+          Mark Present
+        </button>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Student that it matches the existing snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="student"
+  >
+    <h3
+      class="absent"
+    >
+      Ada Lovelace
+    </h3>
+    <input
+      value="Ada Lovelace"
+    />
+    <ul>
+      <li>
+        Class: C13
+      </li>
+      <li>
+        Birthday: 10 December 1815
+      </li>
+      <li>
+        Email: Ada@adadev.org
+      </li>
+    </ul>
+    <button>
+      Mark Present
+    </button>
+  </div>
+</DocumentFragment>
+`;
