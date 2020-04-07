@@ -1,20 +1,22 @@
-[
-  {
-    "id": 1,
-    "fullName": "Ada Lovelace",
-    "email": "ada@lovelace.uk",
-    "present": true
-  },
-  {
-    "id": 2,
-    "fullName": "Grace Hopper",
-    "email": "grace@navy.mil",
-    "present": true
-  },
-  {
-    "id": 3,
-    "fullName": "Katherine Johnson",
-    "email": "KJonhnson@nasa.gov",
-    "present": false
-  }
-]
+{
+  "students": [
+    {
+      "id": 1,
+      "fullName": "Ada Lovelace",
+      "email": "ada@lovelace.uk",
+      "present": true
+    },
+    {
+      "id": 2,
+      "fullName": "Grace Hopper",
+      "email": "grace@navy.mil",
+      "present": true
+    },
+    {
+      "id": 3,
+      "fullName": "Katherine Johnson",
+      "email": "KJonhnson@nasa.gov",
+      "present": false
+    }
+  ]
+}
