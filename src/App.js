@@ -18,8 +18,22 @@ const students = [
   },
 ];
 
-function App () {
-  const [studentList, setStudentList] = useState(students);
+const App = () => {
+  const [studentList, setStudentList] = useState([]);
+
+  useEffect(() => {
+    const startingStudents = JSON.parse(localStorage.getItem('studentList')) || students;
+
+    setStudentList(startingStudents);
+
+    return () => {
+      localStorage.setItem('studentList', JSON.stringify(studentList));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('studentList', JSON.stringify(studentList));
+  }, [studentList]);
 
   const updateStudent = (updatedStudent) => {
     const students = [];
