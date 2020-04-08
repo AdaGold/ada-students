@@ -6,3 +6,9 @@
 .student .present {
   color: green;
 }
+
+.delete-btn {
+  background-color: crimson;
+  color: white;
+  font-weight: bolder;
+}
