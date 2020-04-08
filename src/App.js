@@ -25,19 +25,18 @@ const App = () => {
   const [studentList, setStudentList] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
 
+
   useEffect(() => {
-    const startingStudents = JSON.parse(localStorage.getItem('studentList')) || students;
-
-    setStudentList(startingStudents);
-
-    return () => {
-      localStorage.setItem('studentList', JSON.stringify(studentList));
-    }
+    axios.get(API_URL_BASE)
+      .then((response) => {
+        const apiStudentList = response.data;
+        setStudentList(apiStudentList);
+      })
+      .catch((error) => {
+        // Still need to handle errors
+        setErrorMessage(error.message);
+      });
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('studentList', JSON.stringify(studentList));
-  }, [studentList]);
 
   const updateStudent = (updatedStudent) => {
     const students = [];
