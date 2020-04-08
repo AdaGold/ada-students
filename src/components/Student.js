@@ -14,12 +14,12 @@ const Student = (props) => {
       present: !props.present,
       id: props.id,
     }
-    props.onUpdateStudent(updatedStudent);
+    props.updateStudentCallback(updatedStudent);
   }
 
   const onFullNameInputChange = (event) => {
     const fullName = event.target.value;
-    props.onUpdateStudent({
+    props.updateStudentCallback({
       fullName,
       birthday: props.birthday,
       email: props.email,
