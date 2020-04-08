@@ -91,7 +91,11 @@ const App = () => {
   return (
     <div className="App">
       {errorMessage ? <div><h2 className="error-msg">{errorMessage}</h2></div> : ''}
-      <StudentCollection students={studentList} onUpdateStudent={updateStudent} />
+      <StudentCollection
+        students={studentList}
+        updateStudentCallback={updateStudent}
+        deleteStudentCallback={deleteStudent}
+      />
       <NewStudentForm addStudentCallback={addStudent} />
     </div>
   );
