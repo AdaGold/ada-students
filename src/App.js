@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import StudentCollection from './components/StudentCollection';
 import NewStudentForm from './components/NewStudentForm';
 import './App.css';
+
+const API_URL_BASE = 'http://localhost:3000/students';
 
 const students = [
   {
