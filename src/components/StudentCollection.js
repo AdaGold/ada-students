@@ -14,7 +14,8 @@ const StudentCollection = (props) => {
           email={student.email}
           present={student.present}
           id={student.id}
-          onUpdateStudent={props.onUpdateStudent}
+          updateStudentCallback={props.updateStudentCallback}
+          deleteStudentCallback={props.deleteStudentCallback}
         />
       </li>
     );
@@ -36,7 +37,8 @@ StudentCollection.propTypes = {
       id: PropTypes.number.isRequired,
     },
   )),
-  onUpdateStudent: PropTypes.func.isRequired,
+  updateStudentCallback: PropTypes.func.isRequired,
+  deleteStudentCallback: PropTypes.func.isRequired,
 }
 
 
