@@ -73,6 +73,7 @@ const App = () => {
 
   return (
     <div className="App">
+      {errorMessage ? <div><h2 className="error-msg">{errorMessage}</h2></div> : ''}
       <StudentCollection students={studentList} onUpdateStudent={updateStudent} />
       <NewStudentForm addStudentCallback={addStudent} />
     </div>
