@@ -33,6 +33,12 @@ const Student = (props) => {
     <div className="student">
       <h3 className={props.present ? 'present' : 'absent'}>{props.fullName}</h3>
       <input value={props.fullName} onChange={onFullNameInputChange} />
+      <button
+        onClick={() => props.deleteStudentCallback(props.id)}
+        className="delete-btn"
+      >
+        Delete
+      </button>
       <ul>
         <li>Class: C13</li>
         <li>Birthday: {props.birthday}</li>
@@ -49,7 +55,8 @@ Student.propTypes = {
   fullName: PropTypes.string.isRequired,
   email: PropTypes.string,
   birthday: PropTypes.string,
-  onUpdateStudent: PropTypes.func.isRequired,
+  updateStudentCallback: PropTypes.func.isRequired,
+  deleteStudentCallback: PropTypes.func.isRequired,
 };
 
 Student.defaultProps = {
