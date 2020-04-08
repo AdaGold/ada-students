@@ -23,6 +23,7 @@ const students = [
 
 const App = () => {
   const [studentList, setStudentList] = useState([]);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     const startingStudents = JSON.parse(localStorage.getItem('studentList')) || students;
